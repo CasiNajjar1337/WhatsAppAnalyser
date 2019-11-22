@@ -8,6 +8,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.stage.FileChooser;
+import javafx.scene.control.TextField;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartUtilities;
 import org.jfree.chart.JFreeChart;
@@ -31,7 +32,11 @@ import java.util.Set;
 public class Controller {
 
     @FXML
-    private Button myButton;
+    private Button btnDateiWaehlen;
+    @FXML
+    private Button btnAnalyseStarten;
+    @FXML
+    private TextField codewordAnalyse;
     @FXML
     private GridPane myGrid;
     @FXML
@@ -48,15 +53,27 @@ public class Controller {
     private PieChart hoursGraph;
     @FXML
     private ImageView words;
+    @FXML
+    private Label pfad;
+
+    private File file;
 
     @FXML
     private void initialize() {
-        myButton.setOnAction((event) -> {
+
+        btnDateiWaehlen.setOnAction((event) -> {
             ConversationData data = null;
             FileChooser fileChooser = new FileChooser();
             fileChooser.setTitle("Daten");
             fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("Archive", "*.txt"));
-            File file = fileChooser.showOpenDialog(myButton.getScene().getWindow());
+            file = fileChooser.showOpenDialog(btnDateiWaehlen.getScene().getWindow());
+            pfad.setText(file.getName());
+        });
+
+        btnAnalyseStarten.setOnAction((event) -> {
+
+            ConversationData data = null;
+
             if (file != null) {
                 data = openFile(file);
             }
@@ -108,7 +125,7 @@ public class Controller {
             System.err.println(e);
         }
 
-        String codewort = JOptionPane.showInputDialog("Codewort eingeben");
+        String codewort = this.codewordAnalyse.getText();
 
         LineAnalyzer analyzer = new LineAnalyzer();
         ConversationData data = new ConversationData();

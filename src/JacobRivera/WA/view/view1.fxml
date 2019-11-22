@@ -1,84 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.chart.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.effect.*?>
-<?import javafx.scene.text.*?>
-<?import java.lang.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JacobRivera.WA.Controller">
+<AnchorPane minHeight="5.0" minWidth="5.0" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JacobRivera.WA.Controller">
    <children>
-      <SplitPane dividerPositions="0.35451505016722407" layoutX="232.0" layoutY="120.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <SplitPane dividerPositions="0.35451505016722407" layoutX="232.0" layoutY="120.0" minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="227.0">
                <children>
-                  <Button fx:id="myButton" layoutX="89.0" layoutY="28.0" mnemonicParsing="false" text="Datos a Analizar" AnchorPane.leftAnchor="89.0" AnchorPane.topAnchor="28.0" />
-                  <GridPane fx:id="myGrid2" layoutX="-2.0" layoutY="59.0" prefHeight="339.0" prefWidth="209.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="59.0">
-                    <columnConstraints>
-                      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
-                    </rowConstraints>
+                  <AnchorPane AnchorPane.bottomAnchor="428.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <Label text="Día más hablado" wrapText="true" GridPane.rowIndex="4">
-                           <font>
-                              <Font name="System Bold Italic" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label text="Mensajes" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
-                           <font>
-                              <Font name="System Bold Italic" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label text="Mes más hablado" wrapText="true" GridPane.rowIndex="6">
-                           <font>
-                              <Font name="System Bold Italic" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label text="Mensajes" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="6">
-                           <font>
-                              <Font name="System Bold Italic" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label text="Promedio diario" wrapText="true" GridPane.rowIndex="2">
-                           <font>
-                              <Font name="System Bold Italic" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label text="Promedio diario (contando días sin hablarse)" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                           <font>
-                              <Font name="System Bold Italic" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label text="Días pasados" textAlignment="CENTER" wrapText="true">
-                           <font>
-                              <Font name="System Bold Italic" size="12.0" />
-                           </font>
-                        </Label>
-                        <Label text="Total mensajes" GridPane.columnIndex="1">
-                           <font>
-                              <Font name="System Bold Italic" size="12.0" />
-                           </font>
-                        </Label>
+                        <GridPane fx:id="myGrid21" prefHeight="123.0" prefWidth="280.0">
+                           <columnConstraints>
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Button fx:id="btnDateiWaehlen" mnemonicParsing="false" text="Chat auswählen" GridPane.rowIndex="1" />
+                              <Button fx:id="btnAnalyseStarten" mnemonicParsing="false" text="Analyse starten" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="codewordAnalyse" GridPane.columnIndex="1" />
+                              <Label fx:id="pfad" text="Pfad" />
+                           </children>
+                        </GridPane>
                      </children>
-                  </GridPane>
+                  </AnchorPane>
+                  <AnchorPane layoutY="127.0" prefHeight="371.0" prefWidth="280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="127.0">
+                     <children>
+                        <GridPane fx:id="myGrid2" prefHeight="371.0" prefWidth="280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columnConstraints>
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Tag mit den meisten Nachrichten" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font name="System Bold Italic" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Nachrichten" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font name="System Bold Italic" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Monat, mit den meisten Nachrichten" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="6">
+                                 <font>
+                                    <Font name="System Bold Italic" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Nachrichten" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                 <font>
+                                    <Font name="System Bold Italic" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Tagesdurchschnitt" wrapText="true" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="System Bold Italic" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Tagesdurchschnitt (Tage, an denen nichts geschrieben wurde, mitgerechnet)" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="System Bold Italic" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Anzahl Tage" textAlignment="CENTER" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold Italic" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Gesamt Nachrichten" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font name="System Bold Italic" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
                </children></AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <TabPane prefHeight="498.0" prefWidth="512.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <TabPane minHeight="0.0" minWidth="0.0" prefHeight="498.0" prefWidth="512.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <tabs>
-                      <Tab text="Datos">
+                      <Tab text="Daten">
                         <content>
                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
@@ -93,22 +114,22 @@
                                         <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
                                       </rowConstraints>
                                        <children>
-                                          <Label text="Participante">
+                                          <Label text="Teilnehmer">
                                              <font>
                                                 <Font name="System Bold Italic" size="12.0" />
                                              </font>
                                           </Label>
-                                          <Label text="Numero de mensajes" GridPane.columnIndex="1">
+                                          <Label text="Anzahl der Nachrichten" GridPane.columnIndex="1">
                                              <font>
                                                 <Font name="System Bold Italic" size="12.0" />
                                              </font>
                                           </Label>
-                                          <Label text="Porcentaje %" GridPane.columnIndex="2">
+                                          <Label text="Prozentsatz %" GridPane.columnIndex="2">
                                              <font>
                                                 <Font name="System Bold Italic" size="12.0" />
                                              </font>
                                           </Label>
-                                          <Label text="Palabras por mensaje" GridPane.columnIndex="3">
+                                          <Label text="Wörter nach Nachrichtnach Nachricht" GridPane.columnIndex="3">
                                              <font>
                                                 <Font name="System Bold Italic" size="12.0" />
                                              </font>
@@ -127,11 +148,11 @@
                               </AnchorPane>
                         </content>
                       </Tab>
-                      <Tab text="Dias hablados">
+                      <Tab text="Gesprächstage">
                            <content>
                             <AnchorPane minHeight="0.0" minWidth="0.0">
                                  <children>
-                                    <LineChart fx:id="daysGraph" createSymbols="false" prefHeight="469.0" prefWidth="512.0" title="Dias hablados" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <LineChart fx:id="daysGraph" createSymbols="false" prefHeight="469.0" prefWidth="512.0" title="Nachrichten pro Tag" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                       <xAxis>
                                         <CategoryAxis side="BOTTOM" />
                                       </xAxis>
@@ -143,7 +164,7 @@
                               </AnchorPane>
                            </content>
                       </Tab>
-                        <Tab text="Todos los dias">
+                        <Tab text="Jeden Tag">
                           <content>
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
@@ -159,7 +180,7 @@
                               </AnchorPane>
                           </content>
                         </Tab>
-                        <Tab text="Mensajes">
+                        <Tab text="Nachrichten">
                           <content>
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
@@ -177,7 +198,7 @@
                                 </AnchorPane>
                             </content>
                         </Tab>
-                        <Tab text="Horas">
+                        <Tab text="Stunden">
                           <content>
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
@@ -186,7 +207,7 @@
                               </AnchorPane>
                           </content>
                         </Tab>
-                        <Tab text="Palabras">
+                        <Tab text="Wörter">
                           <content>
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
