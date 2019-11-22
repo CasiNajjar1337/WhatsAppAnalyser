@@ -1,0 +1,5 @@
+vm:
+--module-path C:\Users\%USERNAME%\Desktop\EMANUEL\OneDrive\Programmieren\Libs\javafx\javafx-sdk-11.0.2\lib --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.web
+
+jar:
+start javaw --module-path C:\Users\%USERNAME%\Desktop\EMANUEL\OneDrive\Programmieren\Libs\javafx\javafx-sdk-11.0.2\lib --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.web -jar .\WhatsAppAnalyser1.0.jar
