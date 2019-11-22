@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_programme" default="compile.module.programme">
+  <dirname property="module.programme.basedir" file="${ant.file.module_programme}"/>
+  
+  <property name="module.jdk.home.programme" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.programme" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.programme" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.programme" value="-encoding UTF-8 -source 12 -target 12 ${compiler.args}"/>
+  
+  <property name="programme.output.dir" value="${module.programme.basedir}/out/production/Programme"/>
+  <property name="programme.testoutput.dir" value="${module.programme.basedir}/out/test/Programme"/>
+  
+  <path id="programme.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="programme.module.production.classpath">
+    <path refid="${module.jdk.classpath.programme}"/>
+    <path refid="library.cglib-nodep-2.2.classpath"/>
+    <path refid="library.cjftransform-1.0.1.classpath"/>
+    <path refid="library.commons-io-2.4.classpath"/>
+    <path refid="library.commons-lang-2.6.classpath"/>
+    <path refid="library.commons-lang3-3.1.classpath"/>
+    <path refid="library.hamcrest-all-1.1.classpath"/>
+    <path refid="library.ictclas4j-1.0.1.classpath"/>
+    <path refid="library.jcommon-1.0.23.classpath"/>
+    <path refid="library.jfreechart-1.0.19.classpath"/>
+    <path refid="library.jfreesvg-2.1.classpath"/>
+    <path refid="library.jna-4.0.0.classpath"/>
+    <path refid="library.jsoup-1.7.3.classpath"/>
+    <path refid="library.kumo-1.1.classpath"/>
+    <path refid="library.lambdaj-2.3.3.classpath"/>
+    <path refid="library.language-en-2.5.classpath"/>
+    <path refid="library.language-zh-2.5.classpath"/>
+    <path refid="library.languagetool-core-2.5.classpath"/>
+    <path refid="library.log4j-1.2.16.classpath"/>
+    <path refid="library.morfologik-fsa-1.9.0.classpath"/>
+    <path refid="library.morfologik-speller-1.9.0.classpath"/>
+    <path refid="library.morfologik-stemming-1.9.0.classpath"/>
+    <path refid="library.objenesis-1.2.classpath"/>
+    <path refid="library.opennlp-chunk-models-1.5.classpath"/>
+    <path refid="library.opennlp-tools-1.5.3.classpath"/>
+    <path refid="library.opennlp-maxent-3.0.3.classpath"/>
+    <path refid="library.opennlp-postag-models-1.5.classpath"/>
+    <path refid="library.opennlp-tokenize-models-1.5.classpath"/>
+    <path refid="library.segment-1.4.2.classpath"/>
+    <path refid="library.servlet-api-2.5.classpath"/>
+    <path refid="library.sqlite-jdbc-3.8.7.classpath"/>
+    <path refid="library.tika-core-1.4.classpath"/>
+    <path refid="library.lib.classpath"/>
+  </path>
+  
+  <path id="programme.runtime.production.module.classpath">
+    <pathelement location="${programme.output.dir}"/>
+    <path refid="library.cglib-nodep-2.2.classpath"/>
+    <path refid="library.cjftransform-1.0.1.classpath"/>
+    <path refid="library.commons-io-2.4.classpath"/>
+    <path refid="library.commons-lang-2.6.classpath"/>
+    <path refid="library.commons-lang3-3.1.classpath"/>
+    <path refid="library.hamcrest-all-1.1.classpath"/>
+    <path refid="library.ictclas4j-1.0.1.classpath"/>
+    <path refid="library.jcommon-1.0.23.classpath"/>
+    <path refid="library.jfreechart-1.0.19.classpath"/>
+    <path refid="library.jfreesvg-2.1.classpath"/>
+    <path refid="library.jna-4.0.0.classpath"/>
+    <path refid="library.jsoup-1.7.3.classpath"/>
+    <path refid="library.kumo-1.1.classpath"/>
+    <path refid="library.lambdaj-2.3.3.classpath"/>
+    <path refid="library.language-en-2.5.classpath"/>
+    <path refid="library.language-zh-2.5.classpath"/>
+    <path refid="library.languagetool-core-2.5.classpath"/>
+    <path refid="library.log4j-1.2.16.classpath"/>
+    <path refid="library.morfologik-fsa-1.9.0.classpath"/>
+    <path refid="library.morfologik-speller-1.9.0.classpath"/>
+    <path refid="library.morfologik-stemming-1.9.0.classpath"/>
+    <path refid="library.objenesis-1.2.classpath"/>
+    <path refid="library.opennlp-chunk-models-1.5.classpath"/>
+    <path refid="library.opennlp-tools-1.5.3.classpath"/>
+    <path refid="library.opennlp-maxent-3.0.3.classpath"/>
+    <path refid="library.opennlp-postag-models-1.5.classpath"/>
+    <path refid="library.opennlp-tokenize-models-1.5.classpath"/>
+    <path refid="library.segment-1.4.2.classpath"/>
+    <path refid="library.servlet-api-2.5.classpath"/>
+    <path refid="library.sqlite-jdbc-3.8.7.classpath"/>
+    <path refid="library.tika-core-1.4.classpath"/>
+    <path refid="library.lib.classpath"/>
+  </path>
+  
+  <path id="programme.module.classpath">
+    <path refid="${module.jdk.classpath.programme}"/>
+    <pathelement location="${programme.output.dir}"/>
+    <path refid="library.cglib-nodep-2.2.classpath"/>
+    <path refid="library.cjftransform-1.0.1.classpath"/>
+    <path refid="library.commons-io-2.4.classpath"/>
+    <path refid="library.commons-lang-2.6.classpath"/>
+    <path refid="library.commons-lang3-3.1.classpath"/>
+    <path refid="library.hamcrest-all-1.1.classpath"/>
+    <path refid="library.ictclas4j-1.0.1.classpath"/>
+    <path refid="library.jcommon-1.0.23.classpath"/>
+    <path refid="library.jfreechart-1.0.19.classpath"/>
+    <path refid="library.jfreesvg-2.1.classpath"/>
+    <path refid="library.jna-4.0.0.classpath"/>
+    <path refid="library.jsoup-1.7.3.classpath"/>
+    <path refid="library.kumo-1.1.classpath"/>
+    <path refid="library.lambdaj-2.3.3.classpath"/>
+    <path refid="library.language-en-2.5.classpath"/>
+    <path refid="library.language-zh-2.5.classpath"/>
+    <path refid="library.languagetool-core-2.5.classpath"/>
+    <path refid="library.log4j-1.2.16.classpath"/>
+    <path refid="library.morfologik-fsa-1.9.0.classpath"/>
+    <path refid="library.morfologik-speller-1.9.0.classpath"/>
+    <path refid="library.morfologik-stemming-1.9.0.classpath"/>
+    <path refid="library.objenesis-1.2.classpath"/>
+    <path refid="library.opennlp-chunk-models-1.5.classpath"/>
+    <path refid="library.opennlp-tools-1.5.3.classpath"/>
+    <path refid="library.opennlp-maxent-3.0.3.classpath"/>
+    <path refid="library.opennlp-postag-models-1.5.classpath"/>
+    <path refid="library.opennlp-tokenize-models-1.5.classpath"/>
+    <path refid="library.segment-1.4.2.classpath"/>
+    <path refid="library.servlet-api-2.5.classpath"/>
+    <path refid="library.sqlite-jdbc-3.8.7.classpath"/>
+    <path refid="library.tika-core-1.4.classpath"/>
+    <path refid="library.lib.classpath"/>
+  </path>
+  
+  <path id="programme.runtime.module.classpath">
+    <pathelement location="${programme.testoutput.dir}"/>
+    <pathelement location="${programme.output.dir}"/>
+    <path refid="library.cglib-nodep-2.2.classpath"/>
+    <path refid="library.cjftransform-1.0.1.classpath"/>
+    <path refid="library.commons-io-2.4.classpath"/>
+    <path refid="library.commons-lang-2.6.classpath"/>
+    <path refid="library.commons-lang3-3.1.classpath"/>
+    <path refid="library.hamcrest-all-1.1.classpath"/>
+    <path refid="library.ictclas4j-1.0.1.classpath"/>
+    <path refid="library.jcommon-1.0.23.classpath"/>
+    <path refid="library.jfreechart-1.0.19.classpath"/>
+    <path refid="library.jfreesvg-2.1.classpath"/>
+    <path refid="library.jna-4.0.0.classpath"/>
+    <path refid="library.jsoup-1.7.3.classpath"/>
+    <path refid="library.kumo-1.1.classpath"/>
+    <path refid="library.lambdaj-2.3.3.classpath"/>
+    <path refid="library.language-en-2.5.classpath"/>
+    <path refid="library.language-zh-2.5.classpath"/>
+    <path refid="library.languagetool-core-2.5.classpath"/>
+    <path refid="library.log4j-1.2.16.classpath"/>
+    <path refid="library.morfologik-fsa-1.9.0.classpath"/>
+    <path refid="library.morfologik-speller-1.9.0.classpath"/>
+    <path refid="library.morfologik-stemming-1.9.0.classpath"/>
+    <path refid="library.objenesis-1.2.classpath"/>
+    <path refid="library.opennlp-chunk-models-1.5.classpath"/>
+    <path refid="library.opennlp-tools-1.5.3.classpath"/>
+    <path refid="library.opennlp-maxent-3.0.3.classpath"/>
+    <path refid="library.opennlp-postag-models-1.5.classpath"/>
+    <path refid="library.opennlp-tokenize-models-1.5.classpath"/>
+    <path refid="library.segment-1.4.2.classpath"/>
+    <path refid="library.servlet-api-2.5.classpath"/>
+    <path refid="library.sqlite-jdbc-3.8.7.classpath"/>
+    <path refid="library.tika-core-1.4.classpath"/>
+    <path refid="library.lib.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.programme">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.programme">
+    <patternset refid="excluded.from.module.programme"/>
+  </patternset>
+  
+  <path id="programme.module.sourcepath">
+    <dirset dir="${module.programme.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.programme" depends="compile.module.programme.production,compile.module.programme.tests" description="Compile module Programme"/>
+  
+  <target name="compile.module.programme.production" depends="register.custom.compilers" description="Compile module Programme; production classes">
+    <mkdir dir="${programme.output.dir}"/>
+    <javac2 destdir="${programme.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.programme}/javac">
+      <compilerarg line="${compiler.args.programme}"/>
+      <bootclasspath refid="programme.module.bootclasspath"/>
+      <classpath refid="programme.module.production.classpath"/>
+      <src refid="programme.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.programme"/>
+    </javac2>
+    
+    <copy todir="${programme.output.dir}">
+      <fileset dir="${module.programme.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.programme.tests" depends="register.custom.compilers,compile.module.programme.production" description="compile module Programme; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.programme" description="cleanup module">
+    <delete dir="${programme.output.dir}"/>
+    <delete dir="${programme.testoutput.dir}"/>
+  </target>
+</project>
